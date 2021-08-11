@@ -120,12 +120,20 @@
               <p class="card-text">Me llamo Edwin, y manejo bici desde que tengo memoria, actualmente uso la bici para poder hacer entregas de mi bodega, vota por mi y ayudame a poder mejorar mi herramienta de trabajo.</p>
               <div class="d-flex justify-content-around align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Votar</button>
-                  </div>
-                  <p style="text-align: right;">
-                    1000
+                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary" onclick="miFunc()">Votar</button> -->
+                    <button type="button" class="btn btn-sm btn-outline-secondary" id="botonClick">Votar</button>
+                    <p  id="areaContador"></p>
                     <img src="./heartverde.png" style="width: 10%;">
-                  </p>
+                    <script type="text/javascript">
+                      var botonElement = document.getElementById("botonClick");
+                      var pElement = document.getElementById("areaContador");
+                      var contador = 0;
+                      botonElement.onclick = function () {
+                          contador++;
+                          pElement.textContent = contador;
+                      }
+                    </script>
+                  </div>
               </div>
             </div>
           </div>
